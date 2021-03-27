@@ -1,0 +1,6 @@
+[submodule "tokopedia_client"]
+	path = tokopedia_client
+	url = https://github.com/Vaziria/tokopedia_client
+[submodule "vazutils"]
+	path = vazutils
+	url = https://github.com/Vaziria/vazutils
