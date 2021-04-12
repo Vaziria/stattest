@@ -5,9 +5,11 @@ name = "pypi"
 
 [packages]
 requests = "*"
-pika = "*"
+pika = "==1.0.0"
+pytest-benchmark = "*"
 
 [dev-packages]
+locust = "*"
 
 [requires]
 python_version = "3.9"

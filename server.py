@@ -1,21 +1,22 @@
+import pika
 import time
-import zmq
+from mause_rpc.server import Server
 
-context = zmq.Context()
-socket = context.socket(zmq.REP)
-socket.bind("tcp://*:5555")
-
-
-class ServerHandler:
+rpc_queue = 'rpc.queue'
+server = Server(rpc_queue, pika.ConnectionParameters(host='localhost'))
 
 
-while True:
-    #  Wait for next request from client
-    message = socket.recv()
-    print("Received request: %s" % message)
+@server.register
+def hello(name: str) -> str:
+    return 'hello ' + name
 
-    #  Do some 'work'
-    time.sleep(1)
 
-    #  Send reply back to client
-    socket.send(b"World")
+@server.register('divide')
+def div(a: int, b: int) -> float:
+    if b == 0:
+        raise ZeroDivisionError()
+    return a / b
+
+
+if __name__ == '__main__':
+    server.serve()
