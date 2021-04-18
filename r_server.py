@@ -22,6 +22,14 @@ def req_shopee():
         'code': req.status_code
     }
 
+@crawling.register
+def req_arg(c):
+    req = requests.get('https://shopee.co.id/')
+    return {
+        'body': req.text[:100],
+        'code': req.status_code
+    }
+
 if __name__ == '__main__':
     crawling.start()
     print(req_ip())

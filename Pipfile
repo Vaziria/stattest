@@ -5,8 +5,13 @@ name = "pypi"
 
 [packages]
 requests = "*"
-pika = "==1.0.0"
 pytest-benchmark = "*"
+pytest-gevent = "*"
+gevent-pika = "*"
+tornado = "*"
+pika = "==1.0.0"
+pytest-asyncio = "*"
+pytest-tornasync = "*"
 
 [dev-packages]
 locust = "*"

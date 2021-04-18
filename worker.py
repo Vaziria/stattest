@@ -1,36 +1,10 @@
-import pika
+from server import adapter, configuration
+import tornado.ioloop
 
-credentials = pika.PlainCredentials('sfdvmpna', 'ccPAaLvQMan_inHm_UVG8bk1mqgmgJW0')
-connection = pika.BlockingConnection(
-    pika.ConnectionParameters(host = 'fish.rmq.cloudamqp.com', credentials=credentials, virtual_host='sfdvmpna'))
+io_loop = tornado.ioloop.IOLoop.current()
 
-channel = connection.channel()
+adapter.receive(queue=configuration["publish"]["outgoing_1"]["exchange"])
+adapter.receive(queue=configuration["publish"]["outgoing_2"]["exchange"])
 
-channel.queue_declare(queue='rpc_queue')
 
-def fib(n):
-    if n == 0:
-        return 0
-    elif n == 1:
-        return 1
-    else:
-        return fib(n - 1) + fib(n - 2)
-
-def on_request(ch, method, props, body):
-    n = int(body)
-
-    print(" [.] fib(%s)" % n)
-    response = fib(n)
-
-    ch.basic_publish(exchange='',
-                     routing_key=props.reply_to,
-                     properties=pika.BasicProperties(correlation_id = \
-                                                         props.correlation_id),
-                     body=str(response))
-    ch.basic_ack(delivery_tag=method.delivery_tag)
-
-channel.basic_qos(prefetch_count=1)
-channel.basic_consume(queue='rpc_queue', on_message_callback=on_request)
-
-print(" [x] Awaiting RPC requests")
-channel.start_consuming()
+io_loop.start()

@@ -5,7 +5,6 @@ import sys
 from src.core.adapter import TornadoAdapter
 
 RABBIT_URI = "amqp://localhost:5672/"
-
 if sys.platform == 'win32':
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
@@ -42,7 +41,7 @@ configuration = dict(
         )
     )
 )
-
+# Using AsyncIO IO Loop
 io_loop = asyncio.get_event_loop()
 adapter = TornadoAdapter(rabbitmq_url=RABBIT_URI, configuration=configuration, io_loop=io_loop)
 
@@ -51,15 +50,16 @@ def crawl_shopee():
     req = requests.get('https://shopee.co.id')
     return req
 
+async def test():
+    # await adapter.publish(body="First second test message", exchange="test_2")
+    events = []
+    for _ in range(0, 10):
+        future = crawl_shopee.execute()
+        events.append(future)
+    
+    hasil = await asyncio.gather(*events)
+    print(hasil)
+
 if __name__ == '__main__':
-    async def test():
-        # await adapter.publish(body="First second test message", exchange="test_2")
-        events = []
-        for _ in range(0, 10):
-            future = crawl_shopee.execute()
-            events.append(future)
-        
-        hasil = await asyncio.gather(*events)
-        print(hasil)
     io_loop.run_until_complete(test())
 # asyncio.gather(*data)

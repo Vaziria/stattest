@@ -34,9 +34,9 @@ class Tasker:
         self.callback_queue = result.method.queue
 
         self.channel.basic_consume(
-            queue=self.callback_queue,
-            on_message_callback=self.worker_response,
-            auto_ack=True)
+            self.worker_response,
+            self.callback_queue,
+            no_ack=True)
 
     def __call__(self, *arg, **kwarg):
         return self.func(*arg, **kwarg)
@@ -97,7 +97,7 @@ class Worker:
             try:
                 print('[ processing ] {}'.format(fname))
                 return func(*arg, **kwarg)
-            except Exception as e:
+            except Exception:
                 traceback.print_exc()
 
     def on_request(self, channel: BlockingChannel, method, props, body):
@@ -121,9 +121,9 @@ class Worker:
         self.func_list[name] = func
         return task
 
-    def start(self, prefetch_count: int = 4):
+    def start(self, prefetch_count: int = 1):
         self.channel.basic_qos(prefetch_count=prefetch_count)
-        self.channel.basic_consume(queue=self.queue_name, on_message_callback=self.on_request)
+        self.channel.basic_consume(self.on_request, self.queue_name, no_ack=False)
 
         print(" [x] RPC Worker started")
         self.channel.start_consuming()
