@@ -1,0 +1,48 @@
+version: "3.2"
+services:
+    rabbitmq:
+        image: rabbitmq:3-management-alpine
+        container_name: 'rabbitmq'
+        ports:
+            - 5672:5672
+            - 15672:15672
+        volumes:
+            - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+            - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+    
+    publiser:
+        image: crawl_publisher
+        container_name: 'publisher'
+        ports:
+            - 8080:8080
+        deploy:
+            resources:
+                limits:
+                cpus: '1'
+                memory: 512M
+    
+    worker:
+        image: crawl_worker
+        container_name: 'worker'
+        environment:
+            - RABBIT_URI=amqp://rabbitmq:5672/
+        deploy:
+            resources:
+              limits:
+                cpus: '1'
+                memory: 512M
+
+    locust:
+        image: locustio/locust
+        ports:
+        - "8089:8089"
+        volumes:
+        - ./:/mnt/locust
+        command: -f /mnt/locust/locustfile.py --master -H http://locust:8089
+    
+    locustnode:
+        image: locustio/locust
+        volumes:
+        - ./:/mnt/locust
+        command: -f /mnt/locust/locustfile.py --worker --master-host locust
+

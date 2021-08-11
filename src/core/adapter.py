@@ -43,6 +43,8 @@ class Config(TypedDict):
 class TornadoAdapter(TaskAdapter):
 
     logger = logger
+    pub_connection: AsyncConnection
+    rcv_connection: AsyncConnection
 
     def __init__(self, rabbitmq_url, configuration: Config, io_loop=None):
         super().__init__()

@@ -48,7 +48,7 @@ adapter = TornadoAdapter(rabbitmq_url=RABBIT_URI, configuration=configuration, i
 
 @adapter.register("fib_server_q", publish_exchange="test_rpc")
 def crawl_shopee():
-    req = requests.get('https://shopee.co.id')
+    req = requests.get('https://tokopedia.com')
     return req
 
 if __name__ == '__main__':
