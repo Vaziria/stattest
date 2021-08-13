@@ -1,4 +1,5 @@
-from server import adapter, configuration
+from src.adapter import adapter, configuration
+from src import crawler_app
 import tornado.ioloop
 
 io_loop = tornado.ioloop.IOLoop.current()

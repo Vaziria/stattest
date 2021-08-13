@@ -12,3 +12,12 @@ https://towardsdatascience.com/how-to-dockerize-an-existing-flask-application-11
 
 #### scaling
 https://docs.docker.com/compose/reference/scale/
+
+
+C:\Program Files\RabbitMQ Server\rabbitmq_server-3.8.9\sbin
+
+
+# management
+rabbitmq-plugins enable rabbitmq_management
+http://localhost:15672/
+http://localhost:8089/

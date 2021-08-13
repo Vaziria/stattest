@@ -12,6 +12,8 @@ tornado = "*"
 pika = "==1.0.0"
 pytest-asyncio = "*"
 pytest-tornasync = "*"
+pymongo = "*"
+apscheduler = "*"
 
 [dev-packages]
 locust = "*"

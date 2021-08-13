@@ -56,7 +56,7 @@ if __name__ == '__main__':
         # await adapter.publish(body="First second test message", exchange="test_2")
         events = []
         for _ in range(0, 10):
-            future = crawl_shopee.execute()
+            future = crawl_shopee.execute('diskonlaptop')
             events.append(future)
         
         hasil = await asyncio.gather(*events)
