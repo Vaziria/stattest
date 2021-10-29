@@ -1,5 +1,11 @@
 # stattest
 
+# file penting
+server.py
+worker.py
+
+
+
 referensi:
 https://github.com/Mause/rpc
 https://pypi.org/project/rabbitmq-rpc/

@@ -8982,6 +8982,7 @@ Traceback (most recent call last):
     raise ConnectionError(err, request=request)
 requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
 2021-08-11 14:41:50,725[ ERROR ]src.core.adapter: RPC timeout. Correlation id: 1f24978a-fa77-11eb-bfae-c85b7652715d
+<<<<<<< Updated upstream
 2021-08-11 21:28:35,331[ INFO ]src.core.channel_configuration: [start consuming] routing key: crawler_out; queue name: crawler_out_q
 2021-08-11 21:28:35,347[ INFO ]src.core.channel_configuration: creating channel
 2021-08-11 21:28:35,363[ INFO ]src.core.async_connection: Creating connection to RabbitMQ
@@ -27279,3 +27280,267 @@ ccessfully
 2021-08-13 06:09:27,977[ INFO ]src.core.adapter: RPC message gets response. 552985ab-fbc2-11eb-a2d1-c85b7652715d
 2021-08-13 06:09:27,983[ INFO ]src.core.adapter: RPC message gets response. 552e4ad3-fbc2-11eb-9288-c85b7652715d
 2021-08-13 06:09:27,988[ INFO ]src.core.adapter: RPC message gets response. 55330eed-fbc2-11eb-af8f-c85b7652715d
+=======
+2021-10-26 19:17:25,780[ INFO ]src.core.adapter: Preparing to rpc call. Publish exchange: test_rpc; Receive queue: fib_server_q
+2021-10-26 19:17:25,780[ INFO ]src.core.channel_configuration: [start consuming] routing key: fib_server; queue name: fib_server_q
+2021-10-26 19:17:25,780[ INFO ]src.core.channel_configuration: creating channel
+2021-10-26 19:17:25,780[ INFO ]src.core.async_connection: Creating connection to RabbitMQ
+2021-10-26 19:17:25,796[ INFO ]src.core.adapter: Preparing to rpc call. Publish exchange: test_rpc; Receive queue: fib_server_q
+2021-10-26 19:17:25,796[ INFO ]src.core.channel_configuration: [start consuming] routing key: fib_server; queue name: fib_server_q
+2021-10-26 19:17:25,796[ INFO ]src.core.channel_configuration: creating channel
+2021-10-26 19:17:25,796[ INFO ]src.core.adapter: Preparing to rpc call. Publish exchange: test_rpc; Receive queue: fib_server_q
+2021-10-26 19:17:25,796[ INFO ]src.core.channel_configuration: [start consuming] routing key: fib_server; queue name: fib_server_q
+2021-10-26 19:17:25,796[ INFO ]src.core.channel_configuration: creating channel
+2021-10-26 19:17:25,806[ INFO ]src.core.adapter: Preparing to rpc call. Publish exchange: test_rpc; Receive queue: fib_server_q
+2021-10-26 19:17:25,806[ INFO ]src.core.channel_configuration: [start consuming] routing key: fib_server; queue name: fib_server_q
+2021-10-26 19:17:25,806[ INFO ]src.core.channel_configuration: creating channel
+2021-10-26 19:17:25,806[ INFO ]src.core.adapter: Preparing to rpc call. Publish exchange: test_rpc; Receive queue: fib_server_q
+2021-10-26 19:17:25,806[ INFO ]src.core.channel_configuration: [start consuming] routing key: fib_server; queue name: fib_server_q
+2021-10-26 19:17:25,806[ INFO ]src.core.channel_configuration: creating channel
+2021-10-26 19:17:25,806[ INFO ]src.core.adapter: Preparing to rpc call. Publish exchange: test_rpc; Receive queue: fib_server_q
+2021-10-26 19:17:25,806[ INFO ]src.core.channel_configuration: [start consuming] routing key: fib_server; queue name: fib_server_q
+2021-10-26 19:17:25,806[ INFO ]src.core.channel_configuration: creating channel
+2021-10-26 19:17:25,806[ INFO ]src.core.adapter: Preparing to rpc call. Publish exchange: test_rpc; Receive queue: fib_server_q
+2021-10-26 19:17:25,806[ INFO ]src.core.channel_configuration: [start consuming] routing key: fib_server; queue name: fib_server_q
+2021-10-26 19:17:25,806[ INFO ]src.core.channel_configuration: creating channel
+2021-10-26 19:17:25,806[ INFO ]src.core.adapter: Preparing to rpc call. Publish exchange: test_rpc; Receive queue: fib_server_q
+2021-10-26 19:17:25,806[ INFO ]src.core.channel_configuration: [start consuming] routing key: fib_server; queue name: fib_server_q
+2021-10-26 19:17:25,806[ INFO ]src.core.channel_configuration: creating channel
+2021-10-26 19:17:25,822[ INFO ]src.core.adapter: Preparing to rpc call. Publish exchange: test_rpc; Receive queue: fib_server_q
+2021-10-26 19:17:25,822[ INFO ]src.core.channel_configuration: [start consuming] routing key: fib_server; queue name: fib_server_q
+2021-10-26 19:17:25,822[ INFO ]src.core.channel_configuration: creating channel
+2021-10-26 19:17:25,822[ INFO ]src.core.adapter: Preparing to rpc call. Publish exchange: test_rpc; Receive queue: fib_server_q
+2021-10-26 19:17:25,822[ INFO ]src.core.channel_configuration: [start consuming] routing key: fib_server; queue name: fib_server_q
+2021-10-26 19:17:25,822[ INFO ]src.core.channel_configuration: creating channel
+2021-10-26 19:17:25,875[ INFO ]src.core.async_connection: Created connection
+2021-10-26 19:17:25,883[ INFO ]src.core.channel_configuration: Created channel
+2021-10-26 19:17:25,892[ INFO ]src.core.channel_configuration: Declaring exchange: test_server
+2021-10-26 19:17:25,892[ INFO ]src.core.channel_configuration: Created channel
+2021-10-26 19:17:25,892[ INFO ]src.core.channel_configuration: Declaring exchange: test_server
+2021-10-26 19:17:25,892[ INFO ]src.core.channel_configuration: Created channel
+2021-10-26 19:17:25,892[ INFO ]src.core.channel_configuration: Declaring exchange: test_server
+2021-10-26 19:17:25,892[ INFO ]src.core.channel_configuration: Created channel
+2021-10-26 19:17:25,892[ INFO ]src.core.channel_configuration: Declaring exchange: test_server
+2021-10-26 19:17:25,892[ INFO ]src.core.channel_configuration: Created channel
+2021-10-26 19:17:25,892[ INFO ]src.core.channel_configuration: Declaring exchange: test_server
+2021-10-26 19:17:25,892[ INFO ]src.core.channel_configuration: Created channel
+2021-10-26 19:17:25,892[ INFO ]src.core.channel_configuration: Declaring exchange: test_server
+2021-10-26 19:17:25,908[ INFO ]src.core.channel_configuration: Created channel
+2021-10-26 19:17:25,908[ INFO ]src.core.channel_configuration: Declaring exchange: test_server
+2021-10-26 19:17:25,908[ INFO ]src.core.channel_configuration: Created channel
+2021-10-26 19:17:25,908[ INFO ]src.core.channel_configuration: Declaring exchange: test_server
+2021-10-26 19:17:25,908[ INFO ]src.core.channel_configuration: Created channel
+2021-10-26 19:17:25,923[ INFO ]src.core.channel_configuration: Declaring exchange: test_server
+2021-10-26 19:17:25,923[ INFO ]src.core.channel_configuration: Created channel
+2021-10-26 19:17:25,925[ INFO ]src.core.channel_configuration: Declaring exchange: test_server
+2021-10-26 19:17:25,925[ INFO ]src.core.channel_configuration: Declared exchange: test_server
+2021-10-26 19:17:25,925[ INFO ]src.core.channel_configuration: Declaring queue: fib_server_q
+2021-10-26 19:17:25,925[ INFO ]src.core.channel_configuration: Declared exchange: test_server
+2021-10-26 19:17:25,925[ INFO ]src.core.channel_configuration: Declaring queue: fib_server_q
+2021-10-26 19:17:25,925[ INFO ]src.core.channel_configuration: Declared exchange: test_server
+2021-10-26 19:17:25,925[ INFO ]src.core.channel_configuration: Declaring queue: fib_server_q
+2021-10-26 19:17:25,925[ INFO ]src.core.channel_configuration: Declared exchange: test_server
+2021-10-26 19:17:25,925[ INFO ]src.core.channel_configuration: Declaring queue: fib_server_q
+2021-10-26 19:17:25,925[ INFO ]src.core.channel_configuration: Declared exchange: test_server
+2021-10-26 19:17:25,925[ INFO ]src.core.channel_configuration: Declaring queue: fib_server_q
+2021-10-26 19:17:25,925[ INFO ]src.core.channel_configuration: Declared exchange: test_server
+2021-10-26 19:17:25,925[ INFO ]src.core.channel_configuration: Declaring queue: fib_server_q
+2021-10-26 19:17:25,941[ INFO ]src.core.channel_configuration: Declared exchange: test_server
+2021-10-26 19:17:25,941[ INFO ]src.core.channel_configuration: Declaring queue: fib_server_q
+2021-10-26 19:17:25,941[ INFO ]src.core.channel_configuration: Declared exchange: test_server
+2021-10-26 19:17:25,941[ INFO ]src.core.channel_configuration: Declaring queue: fib_server_q
+2021-10-26 19:17:25,941[ INFO ]src.core.channel_configuration: Declared exchange: test_server
+2021-10-26 19:17:25,941[ INFO ]src.core.channel_configuration: Declaring queue: fib_server_q
+2021-10-26 19:17:25,941[ INFO ]src.core.channel_configuration: Declared exchange: test_server
+2021-10-26 19:17:25,941[ INFO ]src.core.channel_configuration: Declaring queue: fib_server_q
+2021-10-26 19:17:25,972[ INFO ]src.core.channel_configuration: Declared queue: fib_server_q
+2021-10-26 19:17:25,972[ INFO ]src.core.channel_configuration: Binding queue: fib_server_q to exchange: test_server
+2021-10-26 19:17:25,989[ INFO ]src.core.channel_configuration: Declared queue: fib_server_q
+2021-10-26 19:17:25,989[ INFO ]src.core.channel_configuration: Binding queue: fib_server_q to exchange: test_server
+2021-10-26 19:17:25,989[ INFO ]src.core.channel_configuration: Declared queue: fib_server_q
+2021-10-26 19:17:25,989[ INFO ]src.core.channel_configuration: Binding queue: fib_server_q to exchange: test_server
+2021-10-26 19:17:25,989[ INFO ]src.core.channel_configuration: Declared queue: fib_server_q
+2021-10-26 19:17:25,989[ INFO ]src.core.channel_configuration: Binding queue: fib_server_q to exchange: test_server
+2021-10-26 19:17:26,004[ INFO ]src.core.channel_configuration: Declared queue: fib_server_q
+2021-10-26 19:17:26,004[ INFO ]src.core.channel_configuration: Binding queue: fib_server_q to exchange: test_server
+2021-10-26 19:17:26,004[ INFO ]src.core.channel_configuration: Declared queue: fib_server_q
+2021-10-26 19:17:26,004[ INFO ]src.core.channel_configuration: Binding queue: fib_server_q to exchange: test_server
+2021-10-26 19:17:26,020[ INFO ]src.core.channel_configuration: Declared queue: fib_server_q
+2021-10-26 19:17:26,020[ INFO ]src.core.channel_configuration: Binding queue: fib_server_q to exchange: test_server
+2021-10-26 19:17:26,020[ INFO ]src.core.channel_configuration: Declared queue: fib_server_q
+2021-10-26 19:17:26,020[ INFO ]src.core.channel_configuration: Binding queue: fib_server_q to exchange: test_server
+2021-10-26 19:17:26,020[ INFO ]src.core.channel_configuration: Declared queue: fib_server_q
+2021-10-26 19:17:26,020[ INFO ]src.core.channel_configuration: Binding queue: fib_server_q to exchange: test_server
+2021-10-26 19:17:26,036[ INFO ]src.core.channel_configuration: Declared queue: fib_server_q
+2021-10-26 19:17:26,036[ INFO ]src.core.channel_configuration: Binding queue: fib_server_q to exchange: test_server
+2021-10-26 19:17:26,036[ INFO ]src.core.channel_configuration: bound queue: fib_server_q to exchange: test_server
+2021-10-26 19:17:26,051[ INFO ]src.core.adapter: Starting rpc calling correlation id: ae457089-3656-11ec-b1d2-e0d464c80efa
+2021-10-26 19:17:26,051[ INFO ]src.core.adapter: Trying to publish message
+2021-10-26 19:17:26,051[ INFO ]src.core.channel_configuration: creating channel
+2021-10-26 19:17:26,051[ INFO ]src.core.async_connection: Creating connection to RabbitMQ
+2021-10-26 19:17:26,051[ INFO ]src.core.adapter: Starting rpc calling correlation id: ae45708a-3656-11ec-95d1-e0d464c80efa
+2021-10-26 19:17:26,051[ INFO ]src.core.adapter: Trying to publish message
+2021-10-26 19:17:26,051[ INFO ]src.core.channel_configuration: creating channel
+2021-10-26 19:17:26,051[ INFO ]src.core.channel_configuration: bound queue: fib_server_q to exchange: test_server
+2021-10-26 19:17:26,051[ INFO ]src.core.adapter: Starting rpc calling correlation id: ae45708b-3656-11ec-b4d0-e0d464c80efa
+2021-10-26 19:17:26,051[ INFO ]src.core.adapter: Trying to publish message
+2021-10-26 19:17:26,051[ INFO ]src.core.channel_configuration: creating channel
+2021-10-26 19:17:26,067[ INFO ]src.core.channel_configuration: [start consuming] routing key: fib_server; queue name: fib_server_q
+2021-10-26 19:17:26,067[ INFO ]src.core.channel_configuration: creating channel
+2021-10-26 19:17:26,067[ INFO ]src.core.adapter: Starting rpc calling correlation id: ae47d2e3-3656-11ec-94fb-e0d464c80efa
+2021-10-26 19:17:26,067[ INFO ]src.core.adapter: Trying to publish message
+2021-10-26 19:17:26,067[ INFO ]src.core.channel_configuration: creating channel
+2021-10-26 19:17:26,067[ INFO ]src.core.channel_configuration: bound queue: fib_server_q to exchange: test_server
+2021-10-26 19:17:26,067[ INFO ]src.core.adapter: Starting rpc calling correlation id: ae47d2e4-3656-11ec-b751-e0d464c80efa
+2021-10-26 19:17:26,082[ INFO ]src.core.adapter: Trying to publish message
+2021-10-26 19:17:26,082[ INFO ]src.core.channel_configuration: creating channel
+2021-10-26 19:17:26,082[ INFO ]src.core.channel_configuration: [start consuming] routing key: fib_server; queue name: fib_server_q
+2021-10-26 19:17:26,082[ INFO ]src.core.adapter: Starting rpc calling correlation id: ae4a3539-3656-11ec-8e89-e0d464c80efa
+2021-10-26 19:17:26,082[ INFO ]src.core.adapter: Trying to publish message
+2021-10-26 19:17:26,082[ INFO ]src.core.channel_configuration: creating channel
+2021-10-26 19:17:26,082[ INFO ]src.core.adapter: Starting rpc calling correlation id: ae4a353a-3656-11ec-88b6-e0d464c80efa
+2021-10-26 19:17:26,082[ INFO ]src.core.adapter: Trying to publish message
+2021-10-26 19:17:26,082[ INFO ]src.core.channel_configuration: creating channel
+2021-10-26 19:17:26,082[ INFO ]src.core.channel_configuration: Created channel
+2021-10-26 19:17:26,098[ INFO ]src.core.channel_configuration: Declaring exchange: test_server
+2021-10-26 19:17:26,099[ INFO ]src.core.channel_configuration: bound queue: fib_server_q to exchange: test_server
+2021-10-26 19:17:26,099[ INFO ]src.core.adapter: Starting rpc calling correlation id: ae4cb163-3656-11ec-87b1-e0d464c80efa
+2021-10-26 19:17:26,099[ INFO ]src.core.adapter: Trying to publish message
+2021-10-26 19:17:26,099[ INFO ]src.core.channel_configuration: creating channel
+2021-10-26 19:17:26,099[ INFO ]src.core.adapter: Starting rpc calling correlation id: ae4cb164-3656-11ec-afb0-e0d464c80efa
+2021-10-26 19:17:26,099[ INFO ]src.core.adapter: Trying to publish message
+2021-10-26 19:17:26,099[ INFO ]src.core.channel_configuration: creating channel
+2021-10-26 19:17:26,099[ INFO ]src.core.channel_configuration: [start consuming] routing key: fib_server; queue name: fib_server_q
+2021-10-26 19:17:26,099[ INFO ]src.core.adapter: Starting rpc calling correlation id: ae4cb165-3656-11ec-91a7-e0d464c80efa
+2021-10-26 19:17:26,099[ INFO ]src.core.adapter: Trying to publish message
+2021-10-26 19:17:26,114[ INFO ]src.core.channel_configuration: creating channel
+2021-10-26 19:17:26,114[ INFO ]src.core.channel_configuration: Declared exchange: test_server
+2021-10-26 19:17:26,114[ INFO ]src.core.channel_configuration: Declaring queue: fib_server_q
+2021-10-26 19:17:26,114[ INFO ]src.core.channel_configuration: bound queue: fib_server_q to exchange: test_server
+2021-10-26 19:17:26,114[ INFO ]src.core.channel_configuration: [start consuming] routing key: fib_server; queue name: fib_server_q
+2021-10-26 19:17:26,135[ INFO ]src.core.channel_configuration: bound queue: fib_server_q to exchange: test_server
+2021-10-26 19:17:26,140[ INFO ]src.core.channel_configuration: [start consuming] routing key: fib_server; queue name: fib_server_q
+2021-10-26 19:17:26,142[ INFO ]src.core.channel_configuration: Declared queue: fib_server_q
+2021-10-26 19:17:26,143[ INFO ]src.core.channel_configuration: Binding queue: fib_server_q to exchange: test_server
+2021-10-26 19:17:26,145[ INFO ]src.core.channel_configuration: bound queue: fib_server_q to exchange: test_server
+2021-10-26 19:17:26,145[ INFO ]src.core.channel_configuration: [start consuming] routing key: fib_server; queue name: fib_server_q
+2021-10-26 19:17:26,145[ INFO ]src.core.channel_configuration: bound queue: fib_server_q to exchange: test_server
+2021-10-26 19:17:26,155[ INFO ]src.core.async_connection: Created connection
+2021-10-26 19:17:26,162[ INFO ]src.core.channel_configuration: [start consuming] routing key: fib_server; queue name: fib_server_q
+2021-10-26 19:17:26,164[ INFO ]src.core.channel_configuration: bound queue: fib_server_q to exchange: test_server
+2021-10-26 19:17:26,165[ INFO ]src.core.channel_configuration: bound queue: fib_server_q to exchange: test_server
+2021-10-26 19:17:26,165[ INFO ]src.core.channel_configuration: [start consuming] routing key: fib_server; queue name: fib_server_q
+2021-10-26 19:17:26,165[ INFO ]src.core.channel_configuration: [start consuming] routing key: fib_server; queue name: fib_server_q
+2021-10-26 19:17:26,165[ INFO ]src.core.channel_configuration: bound queue: fib_server_q to exchange: test_server
+2021-10-26 19:17:26,165[ INFO ]src.core.channel_configuration: [start consuming] routing key: fib_server; queue name: fib_server_q
+2021-10-26 19:17:26,165[ INFO ]src.core.channel_configuration: Created channel
+2021-10-26 19:17:26,165[ INFO ]src.core.channel_configuration: Declaring exchange: test_rpc
+2021-10-26 19:17:26,165[ INFO ]src.core.channel_configuration: Created channel
+2021-10-26 19:17:26,165[ INFO ]src.core.channel_configuration: Declaring exchange: test_rpc
+2021-10-26 19:17:26,180[ INFO ]src.core.channel_configuration: Created channel
+2021-10-26 19:17:26,182[ INFO ]src.core.channel_configuration: Declaring exchange: test_rpc
+2021-10-26 19:17:26,182[ INFO ]src.core.channel_configuration: Created channel
+2021-10-26 19:17:26,182[ INFO ]src.core.channel_configuration: Declaring exchange: test_rpc
+2021-10-26 19:17:26,182[ INFO ]src.core.channel_configuration: Created channel
+2021-10-26 19:17:26,203[ INFO ]src.core.channel_configuration: Declaring exchange: test_rpc
+2021-10-26 19:17:26,203[ INFO ]src.core.channel_configuration: Created channel
+2021-10-26 19:17:26,203[ INFO ]src.core.channel_configuration: Declaring exchange: test_rpc
+2021-10-26 19:17:26,208[ INFO ]src.core.channel_configuration: Created channel
+2021-10-26 19:17:26,208[ INFO ]src.core.channel_configuration: Declaring exchange: test_rpc
+2021-10-26 19:17:26,211[ INFO ]src.core.channel_configuration: Declared exchange: test_rpc
+2021-10-26 19:17:26,211[ INFO ]src.core.channel_configuration: Declaring queue: fib_calc_q
+2021-10-26 19:17:26,211[ INFO ]src.core.channel_configuration: Created channel
+2021-10-26 19:17:26,215[ INFO ]src.core.channel_configuration: Declaring exchange: test_rpc
+2021-10-26 19:17:26,215[ INFO ]src.core.channel_configuration: Declared exchange: test_rpc
+2021-10-26 19:17:26,215[ INFO ]src.core.channel_configuration: Declaring queue: fib_calc_q
+2021-10-26 19:17:26,215[ INFO ]src.core.channel_configuration: Declared exchange: test_rpc
+2021-10-26 19:17:26,215[ INFO ]src.core.channel_configuration: Declaring queue: fib_calc_q
+2021-10-26 19:17:26,215[ INFO ]src.core.channel_configuration: Created channel
+2021-10-26 19:17:26,215[ INFO ]src.core.channel_configuration: Declaring exchange: test_rpc
+2021-10-26 19:17:26,215[ INFO ]src.core.channel_configuration: Created channel
+2021-10-26 19:17:26,215[ INFO ]src.core.channel_configuration: Declaring exchange: test_rpc
+2021-10-26 19:17:26,215[ INFO ]src.core.channel_configuration: Declared exchange: test_rpc
+2021-10-26 19:17:26,215[ INFO ]src.core.channel_configuration: Declaring queue: fib_calc_q
+2021-10-26 19:17:26,230[ INFO ]src.core.channel_configuration: Declared exchange: test_rpc
+2021-10-26 19:17:26,230[ INFO ]src.core.channel_configuration: Declaring queue: fib_calc_q
+2021-10-26 19:17:26,230[ INFO ]src.core.channel_configuration: Declared exchange: test_rpc
+2021-10-26 19:17:26,230[ INFO ]src.core.channel_configuration: Declaring queue: fib_calc_q
+2021-10-26 19:17:26,230[ INFO ]src.core.channel_configuration: Declared exchange: test_rpc
+2021-10-26 19:17:26,230[ INFO ]src.core.channel_configuration: Declaring queue: fib_calc_q
+2021-10-26 19:17:26,230[ INFO ]src.core.channel_configuration: Declared exchange: test_rpc
+2021-10-26 19:17:26,230[ INFO ]src.core.channel_configuration: Declaring queue: fib_calc_q
+2021-10-26 19:17:26,246[ INFO ]src.core.channel_configuration: Declared exchange: test_rpc
+2021-10-26 19:17:26,246[ INFO ]src.core.channel_configuration: Declaring queue: fib_calc_q
+2021-10-26 19:17:26,246[ INFO ]src.core.channel_configuration: Declared exchange: test_rpc
+2021-10-26 19:17:26,246[ INFO ]src.core.channel_configuration: Declaring queue: fib_calc_q
+2021-10-26 19:17:26,278[ INFO ]src.core.channel_configuration: Declared queue: fib_calc_q
+2021-10-26 19:17:26,278[ INFO ]src.core.channel_configuration: Binding queue: fib_calc_q to exchange: test_rpc
+2021-10-26 19:17:26,278[ INFO ]src.core.channel_configuration: Declared queue: fib_calc_q
+2021-10-26 19:17:26,278[ INFO ]src.core.channel_configuration: Binding queue: fib_calc_q to exchange: test_rpc
+2021-10-26 19:17:26,294[ INFO ]src.core.channel_configuration: Declared queue: fib_calc_q
+2021-10-26 19:17:26,294[ INFO ]src.core.channel_configuration: Binding queue: fib_calc_q to exchange: test_rpc
+2021-10-26 19:17:26,294[ INFO ]src.core.channel_configuration: Declared queue: fib_calc_q
+2021-10-26 19:17:26,294[ INFO ]src.core.channel_configuration: Binding queue: fib_calc_q to exchange: test_rpc
+2021-10-26 19:17:26,294[ INFO ]src.core.channel_configuration: Declared queue: fib_calc_q
+2021-10-26 19:17:26,294[ INFO ]src.core.channel_configuration: Binding queue: fib_calc_q to exchange: test_rpc
+2021-10-26 19:17:26,294[ INFO ]src.core.channel_configuration: Declared queue: fib_calc_q
+2021-10-26 19:17:26,294[ INFO ]src.core.channel_configuration: Binding queue: fib_calc_q to exchange: test_rpc
+2021-10-26 19:17:26,310[ INFO ]src.core.channel_configuration: Declared queue: fib_calc_q
+2021-10-26 19:17:26,310[ INFO ]src.core.channel_configuration: Binding queue: fib_calc_q to exchange: test_rpc
+2021-10-26 19:17:26,310[ INFO ]src.core.channel_configuration: Declared queue: fib_calc_q
+2021-10-26 19:17:26,310[ INFO ]src.core.channel_configuration: Binding queue: fib_calc_q to exchange: test_rpc
+2021-10-26 19:17:26,325[ INFO ]src.core.channel_configuration: Declared queue: fib_calc_q
+2021-10-26 19:17:26,325[ INFO ]src.core.channel_configuration: Binding queue: fib_calc_q to exchange: test_rpc
+2021-10-26 19:17:26,325[ INFO ]src.core.channel_configuration: Declared queue: fib_calc_q
+2021-10-26 19:17:26,325[ INFO ]src.core.channel_configuration: Binding queue: fib_calc_q to exchange: test_rpc
+2021-10-26 19:17:26,341[ INFO ]src.core.channel_configuration: bound queue: fib_calc_q to exchange: test_rpc
+2021-10-26 19:17:26,341[ INFO ]src.core.channel_configuration: Publishing message. exchange: test_rpc; routing_key: fib_calc
+2021-10-26 19:17:26,341[ INFO ]src.core.channel_configuration: Publishing message. exchange: test_rpc; routing_key: fib_calc
+2021-10-26 19:17:26,341[ INFO ]src.core.channel_configuration: Publishing message. exchange: test_rpc; routing_key: fib_calc
+2021-10-26 19:17:26,341[ INFO ]src.core.adapter: RPC message has been sent. ae457089-3656-11ec-b1d2-e0d464c80efa
+2021-10-26 19:17:26,341[ INFO ]src.core.adapter: Beginning waiting for result. ae457089-3656-11ec-b1d2-e0d464c80efa
+2021-10-26 19:17:26,341[ INFO ]src.core.channel_configuration: Publishing message. exchange: test_rpc; routing_key: fib_calc
+2021-10-26 19:17:26,341[ INFO ]src.core.adapter: RPC message has been sent. ae45708a-3656-11ec-95d1-e0d464c80efa
+2021-10-26 19:17:26,341[ INFO ]src.core.adapter: Beginning waiting for result. ae45708a-3656-11ec-95d1-e0d464c80efa
+2021-10-26 19:17:26,357[ INFO ]src.core.channel_configuration: bound queue: fib_calc_q to exchange: test_rpc
+2021-10-26 19:17:26,357[ INFO ]src.core.channel_configuration: Publishing message. exchange: test_rpc; routing_key: fib_calc
+2021-10-26 19:17:26,357[ INFO ]src.core.adapter: RPC message has been sent. ae45708b-3656-11ec-b4d0-e0d464c80efa
+2021-10-26 19:17:26,357[ INFO ]src.core.adapter: Beginning waiting for result. ae45708b-3656-11ec-b4d0-e0d464c80efa
+2021-10-26 19:17:26,357[ INFO ]src.core.channel_configuration: Publishing message. exchange: test_rpc; routing_key: fib_calc
+2021-10-26 19:17:26,357[ INFO ]src.core.adapter: RPC message has been sent. ae47d2e3-3656-11ec-94fb-e0d464c80efa
+2021-10-26 19:17:26,357[ INFO ]src.core.adapter: Beginning waiting for result. ae47d2e3-3656-11ec-94fb-e0d464c80efa
+2021-10-26 19:17:26,357[ INFO ]src.core.channel_configuration: Publishing message. exchange: test_rpc; routing_key: fib_calc
+2021-10-26 19:17:26,357[ INFO ]src.core.adapter: RPC message has been sent. ae47d2e4-3656-11ec-b751-e0d464c80efa
+2021-10-26 19:17:26,357[ INFO ]src.core.adapter: Beginning waiting for result. ae47d2e4-3656-11ec-b751-e0d464c80efa
+2021-10-26 19:17:26,357[ INFO ]src.core.channel_configuration: Publishing message. exchange: test_rpc; routing_key: fib_calc
+2021-10-26 19:17:26,372[ INFO ]src.core.channel_configuration: Publishing message. exchange: test_rpc; routing_key: fib_calc
+2021-10-26 19:17:26,372[ INFO ]src.core.adapter: RPC message has been sent. ae4a3539-3656-11ec-8e89-e0d464c80efa
+2021-10-26 19:17:26,372[ INFO ]src.core.adapter: Beginning waiting for result. ae4a3539-3656-11ec-8e89-e0d464c80efa
+2021-10-26 19:17:26,372[ INFO ]src.core.channel_configuration: Publishing message. exchange: test_rpc; routing_key: fib_calc
+2021-10-26 19:17:26,372[ INFO ]src.core.adapter: RPC message has been sent. ae4a353a-3656-11ec-88b6-e0d464c80efa
+2021-10-26 19:17:26,372[ INFO ]src.core.adapter: Beginning waiting for result. ae4a353a-3656-11ec-88b6-e0d464c80efa
+2021-10-26 19:17:26,372[ INFO ]src.core.adapter: RPC message has been sent. ae4cb163-3656-11ec-87b1-e0d464c80efa
+2021-10-26 19:17:26,372[ INFO ]src.core.adapter: Beginning waiting for result. ae4cb163-3656-11ec-87b1-e0d464c80efa
+2021-10-26 19:17:26,372[ INFO ]src.core.adapter: RPC message has been sent. ae4cb164-3656-11ec-afb0-e0d464c80efa
+2021-10-26 19:17:26,372[ INFO ]src.core.adapter: Beginning waiting for result. ae4cb164-3656-11ec-afb0-e0d464c80efa
+2021-10-26 19:17:26,372[ INFO ]src.core.adapter: RPC message has been sent. ae4cb165-3656-11ec-91a7-e0d464c80efa
+2021-10-26 19:17:26,388[ INFO ]src.core.adapter: Beginning waiting for result. ae4cb165-3656-11ec-91a7-e0d464c80efa
+2021-10-26 19:17:26,404[ INFO ]src.core.channel_configuration: bound queue: fib_calc_q to exchange: test_rpc
+2021-10-26 19:17:26,404[ INFO ]src.core.channel_configuration: bound queue: fib_calc_q to exchange: test_rpc
+2021-10-26 19:17:26,404[ INFO ]src.core.channel_configuration: bound queue: fib_calc_q to exchange: test_rpc
+2021-10-26 19:17:26,419[ INFO ]src.core.channel_configuration: bound queue: fib_calc_q to exchange: test_rpc
+2021-10-26 19:17:26,419[ INFO ]src.core.channel_configuration: bound queue: fib_calc_q to exchange: test_rpc
+2021-10-26 19:17:26,419[ INFO ]src.core.channel_configuration: bound queue: fib_calc_q to exchange: test_rpc
+2021-10-26 19:17:26,435[ INFO ]src.core.channel_configuration: bound queue: fib_calc_q to exchange: test_rpc
+2021-10-26 19:17:26,435[ INFO ]src.core.channel_configuration: bound queue: fib_calc_q to exchange: test_rpc
+2021-10-26 19:31:23,383[ ERROR ]src.core.adapter: RPC timeout. Correlation id: ae457089-3656-11ec-b1d2-e0d464c80efa
+2021-10-26 19:31:23,470[ ERROR ]src.core.adapter: RPC timeout. Correlation id: ae45708a-3656-11ec-95d1-e0d464c80efa
+2021-10-26 19:31:23,496[ ERROR ]src.core.adapter: RPC timeout. Correlation id: ae45708b-3656-11ec-b4d0-e0d464c80efa
+2021-10-26 19:31:23,504[ ERROR ]src.core.adapter: RPC timeout. Correlation id: ae47d2e3-3656-11ec-94fb-e0d464c80efa
+2021-10-26 19:31:23,520[ ERROR ]src.core.adapter: RPC timeout. Correlation id: ae47d2e4-3656-11ec-b751-e0d464c80efa
+2021-10-26 19:31:23,534[ ERROR ]src.core.adapter: RPC timeout. Correlation id: ae4cb163-3656-11ec-87b1-e0d464c80efa
+2021-10-26 19:31:23,546[ ERROR ]src.core.adapter: RPC timeout. Correlation id: ae4cb164-3656-11ec-afb0-e0d464c80efa
+2021-10-26 19:31:23,553[ ERROR ]src.core.adapter: RPC timeout. Correlation id: ae4a353a-3656-11ec-88b6-e0d464c80efa
+2021-10-26 19:31:23,560[ ERROR ]src.core.adapter: RPC timeout. Correlation id: ae4a3539-3656-11ec-8e89-e0d464c80efa
+2021-10-26 19:31:23,568[ ERROR ]src.core.adapter: RPC timeout. Correlation id: ae4cb165-3656-11ec-91a7-e0d464c80efa
+>>>>>>> Stashed changes

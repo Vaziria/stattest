@@ -1,9 +1,7 @@
 from typing import TypedDict
-import logging
 import uuid
 import sys
 
-from cached_property import cached_property
 from pika import BasicProperties
 from pika import URLParameters, ConnectionParameters
 from tornado import gen
